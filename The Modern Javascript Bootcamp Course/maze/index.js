@@ -175,11 +175,9 @@ document.addEventListener('keydown', event => {
     }
     if(event.code === 'KeyS'){ // S
         Body.setVelocity(ball, { x, y: y + 5 });
-    
     }
     if(event.code === 'KeyA'){ // A
         Body.setVelocity(ball, { x: x - 5, y });
-    
     }
 });
 // WIN CONDITION
