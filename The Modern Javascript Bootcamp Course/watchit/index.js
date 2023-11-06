@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// IMPORTS
 import chokidar from 'chokidar';
 import debounce from 'lodash.debounce';
 import program from 'caporal';
@@ -11,7 +12,9 @@ program
     .version('0.0.1')
     .argument('[filename]', 'NAME OF A FILE TO EXECUTE')
     .action(async ({ filename }) => {
+        // IF THEREs NO FILE NAME USE INDEX
         const name = filename || index.js;
+        // TRY-CATCH FINDING FILENAME
         try{
             await fs.promises.access(name);
         } catch (err) {
@@ -33,6 +36,5 @@ program
             .on('change', start)
             .on('unlink', start);
     });
-
 program.parse(process.argv);
 
