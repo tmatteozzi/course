@@ -10,4 +10,4 @@ const pepsi: [string, boolean, number] = ['brown', true, 40];
 // OTHER WAY
 // TYPE ALIAS
 type Drink = [string, boolean, number];
-const coke: Drink = ['brown', true, 50];
+const sprite: Drink = ['clear', true, 50];
