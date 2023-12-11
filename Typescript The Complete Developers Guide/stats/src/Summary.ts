@@ -1,4 +1,6 @@
 import { MatchData } from './MatchData';
+import { WinsAnalysis } from './analyzers/WinsAnalysis';
+import { HtmlReport } from './reportTargets/HtmlReport';
 
 export interface Analyzer {
     run(matches: MatchData[]): string;
@@ -15,5 +17,9 @@ export class Summary {
         // GET OUTPUT (REPORT) FROM ANALYZER
         const output = this.analyzer.run(matches);
         this.outputTarget.print(output);
+    }
+
+    static winsAnalysisWithHtmlReport(team: string): Summary {
+        return new Summary(new WinsAnalysis(team), new HtmlReport())
     }
 }
