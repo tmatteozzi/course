@@ -6,7 +6,7 @@ export class WinsAnalysis implements Analyzer {
     constructor(public team: string) {}
 
     run(matches: MatchData[]): string {
-        // ANALIZE HOW MANY TIMES DID MU WIN AT HOME
+        // ANALIZE HOW MANY TIMES THE TEAM WON
         let wins = 0;
         for (let match of matches) {
             if (match[1] === this.team && match[5] === MatchResult.HomeWin) {
