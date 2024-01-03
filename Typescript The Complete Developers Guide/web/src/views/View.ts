@@ -49,7 +49,7 @@ export abstract class View<T extends Model<K>, K extends HasId> {
     render(): void {
         // START PARENT EMPTY
         this.parent.innerHTML = '';
-
+        // BUILD TEMPLATE
         const templateElement = document.createElement('template');
         templateElement.innerHTML = this.template();
 
