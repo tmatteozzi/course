@@ -5,8 +5,11 @@ export abstract class View<T extends Model<K>, K extends HasId> {
         this.bindModel();
     }
 
-    abstract eventsMap(): { [key: string]: () => void };
     abstract template(): string;
+
+    eventsMap(): { [key: string]: () => void } {
+        return {};
+    }
 
     bindModel(): void {
         this.model.on('change', () => {
@@ -32,5 +35,9 @@ export abstract class View<T extends Model<K>, K extends HasId> {
         templateElement.innerHTML = this.template();
         this.bindEvents(templateElement.content);
         this.parent.appendChild(templateElement.content);
+    }
+
+    regionMap(): void {
+        
     }
 }
