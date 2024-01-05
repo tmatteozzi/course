@@ -1,5 +1,9 @@
 import { Router, Request, Response } from 'express';
 
+interface RequestWithBody extends Request {
+    body: { [key: string]: string | undefined };
+}
+
 const router = Router();
 
 router.get('/login', (req: Request, res: Response) => {
@@ -18,9 +22,23 @@ router.get('/login', (req: Request, res: Response) => {
     `);
 });
 
-router.post('/login', (req: Request, res: Response) => {
+router.post('/login', (req: RequestWithBody, res: Response) => {
     const { email, password } = req.body;
-    res.send(email + password);
+
+    // HARDCODED EMAIL & PASSWORD
+    if (
+        email &&
+        password &&
+        email === 'tomasmatteozzi@gmail.com' &&
+        password === 'password'
+    ) {
+        // MARK PERSON AS LOGGED IN
+        req.session = { loggedIn: true };
+        // REDIRECT TO ROOT ROUTE
+        res.redirect('/');
+    } else {
+        res.send('Invalid email or password');
+    }
 });
 
 export { router };
