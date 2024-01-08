@@ -46,9 +46,9 @@ function printAnything<T>(arr: T[]): void {
 printAnything<string>(['a', 'b', 'c']);
 
 // GENERIC CONSTRAINTS
-class Car {
+class Bike {
     print(): void {
-        console.log('I am a car');
+        console.log('I am a bike');
     }
 }
 
