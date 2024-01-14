@@ -1,9 +1,9 @@
 import express, { Request, Response } from 'express';
-import { router } from './routes/loginRoutes';
 import bodyParser from 'body-parser';
 import cookieSession from 'cookie-session';
 import { AppRouter } from './AppRouter';
 import './controllers/LoginController';
+import './controllers/RootController';
 
 // CREATE APP
 const app = express();
@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieSession({ keys: ['lasfjaf'] })); // ADD SESSION TO REQ PROPERTY
 
 // ROUTER
-app.use(router);
 app.use(AppRouter.getInstance());
 
 // APP LISTENING PORT
