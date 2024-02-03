@@ -33,6 +33,7 @@ function App() {
     // JSX RETURN
     return (
         <div className="app">
+            <h1>Reading list</h1>
             <BookList
                 books={books}
                 onDelete={deleteBookById}
