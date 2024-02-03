@@ -19,10 +19,25 @@ function App() {
         );
     };
 
+    const editBookById = (id, newTitle) => {
+        setBooks(
+            books.map((book) => {
+                if (book.id === id) {
+                    return { ...book, title: newTitle };
+                }
+                return book;
+            })
+        );
+    };
+
     // JSX RETURN
     return (
         <div className="app">
-            <BookList books={books} onDelete={deleteBookById} />
+            <BookList
+                books={books}
+                onDelete={deleteBookById}
+                onEdit={editBookById}
+            />
             <BookCreate onCreate={createBook} />
         </div>
     );
