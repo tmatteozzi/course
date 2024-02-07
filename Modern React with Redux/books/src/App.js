@@ -10,7 +10,7 @@ function App() {
     // CALL FETCHBOOKS AS SOON AS THE APP STARTS
     useEffect(() => {
         fetchBooks();
-    }, []);
+    }, [fetchBooks]);
 
     // JSX RETURN
     return (
