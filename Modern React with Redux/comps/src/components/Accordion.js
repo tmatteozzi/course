@@ -11,4 +11,3 @@ function Accordion({ items }) {
 }
 
 export default Accordion;
-// test
