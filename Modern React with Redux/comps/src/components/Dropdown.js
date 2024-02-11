@@ -1,5 +1,25 @@
+import { useState } from 'react';
+
 function Dropdown({ options }) {
-    return <div>Dropdown...</div>;
+    const [isOpen, setIsOpen] = useState(false);
+    const [selected, setSelected] = useState(null);
+
+    const handleClick = () => {
+        setIsOpen((currentIsOpen) => !currentIsOpen);
+    };
+
+    const handleSelect = () => {};
+
+    const renderedOptions = options.map((option) => {
+        return <div key={option.value}>{option.label}</div>;
+    });
+
+    return (
+        <div>
+            <div onClick={handleClick}>Select...</div>
+            {isOpen && <div>{renderedOptions}</div>}
+        </div>
+    );
 }
 
 export default Dropdown;
