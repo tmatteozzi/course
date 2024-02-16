@@ -33,6 +33,7 @@ function SortableTable(props) {
     let sortedData = data;
     if (sortOrder && sortBy) {
         const { sortValue } = config.find((column) => column.label === sortBy);
+        
         sortedData = [...data].sort((a, b) => {
             const valueA = sortValue(a);
             const valueB = sortValue(b);
