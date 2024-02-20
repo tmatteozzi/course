@@ -1,12 +1,15 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { removeCar } from '../store';
 
 function CarList() {
     const dispatch = useDispatch();
 
-    const cars = useSelector((state) => {
-        return state.cars.data;
-    });
+    const cars = useSelector(({ cars: { data, searchTerm } }) => {
+        // FILTER LOGIC
+        return data.filter((car) =>
+            car.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }, shallowEqual);
 
     const handleCarDelete = (car) => {
         dispatch(removeCar(car.id));
