@@ -13,9 +13,9 @@ function AlbumsList({ user }) {
 
     let content;
     if (isLoading) {
-        return <Skeleton times={3} />;
+        content = <Skeleton className="h-10 w-full" times={3} />;
     } else if (error) {
-        return <div>Error loading albums</div>;
+        content = <div>Error loading albums</div>;
     } else {
         content = data.map((album) => {
             const header = <div>{album.title}</div>;
