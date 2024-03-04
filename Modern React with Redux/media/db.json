@@ -1,5 +1,108 @@
 {
-    "users": [],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "name": "Dwight Becker IV",
+      "id": 1
+    },
+    {
+      "name": "Ernestine Davis",
+      "id": 2
+    },
+    {
+      "name": "Lola Swift",
+      "id": 3
+    },
+    {
+      "name": "Betsy Kohler",
+      "id": 4
+    },
+    {
+      "name": "Priscilla Leffler",
+      "id": 5
+    }
+  ],
+  "albums": [
+    {
+      "userId": 2,
+      "title": "Bespoke Concrete Pizza",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "title": "Rustic Rubber Computer",
+      "id": 14
+    },
+    {
+      "userId": 3,
+      "title": "Ergonomic Frozen Fish",
+      "id": 15
+    },
+    {
+      "userId": 2,
+      "title": "Refined Plastic Chicken",
+      "id": 16
+    },
+    {
+      "userId": 2,
+      "title": "Handmade Bronze Towels",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "title": "Fantastic Granite Car",
+      "id": 18
+    },
+    {
+      "userId": 2,
+      "title": "Ergonomic Steel Pants",
+      "id": 19
+    },
+    {
+      "userId": 2,
+      "title": "Incredible Granite Pants",
+      "id": 20
+    },
+    {
+      "userId": 2,
+      "title": "Unbranded Fresh Computer",
+      "id": 21
+    },
+    {
+      "userId": 3,
+      "title": "Awesome Metal Keyboard",
+      "id": 22
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150/abstract?lock=86594",
+      "id": 3
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150/abstract?lock=87944",
+      "id": 4
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150/abstract?lock=55682",
+      "id": 5
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150/abstract?lock=75466",
+      "id": 6
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150/abstract?lock=81228",
+      "id": 7
+    },
+    {
+      "albumId": 18,
+      "url": "https://loremflickr.com/150/150/abstract?lock=85494",
+      "id": 9
+    }
+  ]
 }
