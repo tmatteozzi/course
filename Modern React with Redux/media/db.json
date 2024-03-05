@@ -71,6 +71,21 @@
       "userId": 3,
       "title": "Awesome Metal Keyboard",
       "id": 22
+    },
+    {
+      "userId": 4,
+      "title": "Recycled Frozen Fish",
+      "id": 23
+    },
+    {
+      "userId": 4,
+      "title": "Unbranded Concrete Shirt",
+      "id": 24
+    },
+    {
+      "userId": 4,
+      "title": "Elegant Granite Keyboard",
+      "id": 25
     }
   ],
   "photos": [
@@ -103,6 +118,16 @@
       "albumId": 18,
       "url": "https://loremflickr.com/150/150/abstract?lock=85494",
       "id": 9
+    },
+    {
+      "albumId": 23,
+      "url": "https://loremflickr.com/150/150/abstract?lock=59090",
+      "id": 10
+    },
+    {
+      "albumId": 23,
+      "url": "https://loremflickr.com/150/150/abstract?lock=92800",
+      "id": 12
     }
   ]
 }
