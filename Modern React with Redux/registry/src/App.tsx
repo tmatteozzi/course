@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './pages/Root';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/home/HomePage';
 import SearchPage from './pages/search/SearchPage';
 import { searchLoader } from './pages/search/searchLoader';
 import DetailsPage from './pages/details/DetailsPage';
 import { detailsLoader } from './pages/details/detailsLoader';
+import { homeLoader } from './pages/home/homeLoader';
 
 const router = createBrowserRouter([
     {
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <HomePage />
+                element: <HomePage />,
+                loader: homeLoader
             },
             {
                 path: '/search',
