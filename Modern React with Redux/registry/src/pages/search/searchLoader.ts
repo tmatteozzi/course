@@ -1,6 +1,15 @@
+import type { PackageSummary } from '../../api/types/packageSummary';
 import { searchPackages } from '../../api/querys/searchPackages';
 
-export async function searchLoader({ request }: { request: Request }) {
+export interface searchLoaderResult {
+    searchResults: PackageSummary[];
+}
+
+export async function searchLoader({
+    request
+}: {
+    request: Request;
+}): Promise<searchLoaderResult> {
     const { searchParams } = new URL(request.url);
     const term = searchParams.get('term');
 

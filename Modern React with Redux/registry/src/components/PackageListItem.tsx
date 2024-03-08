@@ -22,7 +22,7 @@ export default function PackageListItem({ pack }: PackageListItemProps) {
         <div className="border p-4 rounded flex justify-between items-center">
             <div className="flex flex-col gap-2">
                 <Link
-                    to={`packages/${pack.name}`}
+                    to={`/packages/${pack.name}`}
                     className="text-xl font-bold"
                 >
                     {pack.name}
@@ -32,7 +32,7 @@ export default function PackageListItem({ pack }: PackageListItemProps) {
             </div>
             <div className="mr-6">
                 <Link
-                    to={`packages/${pack.name}`}
+                    to={`/packages/${pack.name}`}
                     className="py-2 px-3 rounded bg-black text-white text-lg"
                 >
                     View
