@@ -9,7 +9,14 @@ import {Email} from "../email";
   styleUrl: './email-show.component.css'
 })
 export class EmailShowComponent {
-  email?: Email;
+  email: Email = {
+    id: '',
+    to: '',
+    subject: '',
+    html: '',
+    text: '',
+    from: ``
+  };
 
   constructor(private route: ActivatedRoute, private emailService: EmailService) {
     this.route.data.subscribe(({email}) => {
