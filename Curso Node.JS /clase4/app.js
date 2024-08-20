@@ -16,7 +16,7 @@ app.use(
         'http://localhost:1234',
         'https://movies.com',
         'https://midu.dev',
-        'https://rest-api-deploy-eight.vercel.app'
+        'http://localhost:10000'
       ];
 
       if (ACCEPTED_ORIGINS.includes(origin)) {
