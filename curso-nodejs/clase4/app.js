@@ -33,6 +33,10 @@ app.use(
 
 app.disable('x-powered-by');
 
+app.get('/', (req, res) => {
+  res.send('Test Route');
+});
+
 app.get('/movies', (req, res) => {
   const { genre } = req.query;
   if (genre) {
